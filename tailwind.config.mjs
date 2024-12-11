@@ -1,17 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+
+
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{html,js,ts,jsx,tsx}", // Adjust paths to your components
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        yellowGold: "#E6CA97",
+        whiteGold: "#D9D9D9",
+        roseGold: "#E1A4A9",
+      },
+      fontFamily: {
+        avenir: ["Avenir-Book", "sans-serif"],
+        montserrat_med: ["Montserrat-Medium", "sans-serif"],
+        montserrat_reg: ["Montserrat-Regular", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
