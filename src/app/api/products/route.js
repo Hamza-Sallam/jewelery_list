@@ -1,4 +1,5 @@
 import products from "./products.json";
+import {NextResponse } from "next/server";
 
 
 // const fetchGoldPrice = async () => {
@@ -25,11 +26,12 @@ import products from "./products.json";
         popularity: (product.popularityScore / 20).toFixed(1), // Scale to 5
       }));
   
-      return new Response(JSON.stringify(enrichedProducts), {
+      return new NextResponse(JSON.stringify(enrichedProducts), {
+        status:200,
         headers: { "Content-Type": "application/json" },
       });
     } catch (error) {
-      return new Response(JSON.stringify({ error: error.message }), {
+      return new NextResponse(JSON.stringify({ error: error.message }), {
         status: 500,
         headers: { "Content-Type": "application/json" },
       });
