@@ -3,7 +3,7 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}", // Adjust paths to your components
+    "./src/**/*.{html,js,ts,jsx,tsx}", 
   ],
   theme: {
     extend: {

@@ -1,5 +1,4 @@
 "use client"; 
-
 import { useEffect, useState } from "react"; // Import useState and useEffect
 import axios from "axios"; 
 import ProductCarousel from "../components/Carousel"; // Import the carousel component
@@ -16,7 +15,7 @@ export default function Home() {
         const response = await axios.get("/api/products"); 
         setProducts(response.data);
       } catch (err) {
-        setError("Failed to fetch products.");
+        setError("Failed to fetch products from the API");
         console.error(err);
       } finally {
         setLoading(false);
@@ -27,7 +26,7 @@ export default function Home() {
   }, []); // Empty dependency array ensures it runs only once after component mounts
 
   if (loading) {
-    return <div>Loading...</div>; // Show loading state while fetching
+    return <div>Loading Products...</div>; // Show loading state while fetching
   }
 
   if (error) {

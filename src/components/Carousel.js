@@ -48,14 +48,14 @@ function ProductCarousel({ products }) {
     slidesToShow: 4,   
     slidesToScroll: 1,  
     autoplay: false,    
-    speed: 300,         
+    speed: 500,         
     arrows: true,
     dots: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1279,
         settings: {
           slidesToShow: 3,  
         },
