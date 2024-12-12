@@ -29,7 +29,7 @@ const fetchGoldPrice = async () => {
     const goldPrice= await fetchGoldPrice();
     const enrichedProducts = products.map((product) => ({
       ...product,
-      price: parseFloat(((product.popularityScore + 1) * product.weight * goldPrice).toFixed(2)),
+      price: parseFloat(((product.popularityScore/100 + 1) * product.weight * goldPrice).toFixed(2)),
       popularity: parseFloat((product.popularityScore / 20).toFixed(1)), // Scale to 5
     }));
   
