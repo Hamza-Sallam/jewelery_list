@@ -1,6 +1,6 @@
 import "./globals.css";
 export const metadata = {
-  title: "Engagment Rings",
+  title: "Jewelry Listing List",
 };
 
 export default function RootLayout({ children }) {

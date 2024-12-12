@@ -1,6 +1,5 @@
 "use client"; 
 import { useEffect, useState } from "react"; // Import useState and useEffect
-import axios from "axios"; 
 import ProductCarousel from "../components/Carousel"; // Import the carousel component
 
 export default function Home() {
@@ -12,8 +11,8 @@ export default function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("/api/products"); 
-        setProducts(response.data);
+        const response = await fetch("/api/products",{method: "GET",}); 
+        setProducts(await response.json());
       } catch (err) {
         setError("Failed to fetch products from the API");
         console.error(err);
